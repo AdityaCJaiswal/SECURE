@@ -17,9 +17,8 @@ export const PieChart = () => {
           </div>
           <CardTitle className="text-white text-sm">Traffic</CardTitle>
         </div>
-        <p className="text-xs text-gray-400">$ 10k</p>
       </CardHeader>
-      <CardContent className="space-y-4">
+      <CardContent className="space-y-4 mb-5">
         {/* Pie Chart */}
         <div className="h-40">
           <ResponsiveContainer width="100%" height="100%">
@@ -68,15 +67,7 @@ export const PieChart = () => {
             <div className="flex justify-between text-xs">
               <span className="text-gray-400">05th - 12th Jan</span>
             </div>
-            <div className="space-y-2 mt-3">
-              <div className="flex justify-between text-sm">
-                <span className="text-gray-300">Total Traffic</span>
-                <span className="text-white font-medium">18.5k</span>
-              </div>
-              <div className="flex justify-between text-sm">
-                <span className="text-gray-300">New Visitors</span>
-                <span className="text-green-400 font-medium">2.4k +1k</span>
-              </div>
+            <div className="space-y-1 mt-3">
               <div className="flex justify-between text-sm">
                 <span className="text-gray-300">Repeat Customers</span>
                 <span className="text-white font-medium">16.1k</span>

@@ -66,7 +66,7 @@ export const TrafficChart = () => {
                 stroke="#8B5CF6"
                 strokeWidth={3}
                 dot={{ fill: "#8B5CF6", strokeWidth: 0, r: 4 }}
-                name="Toys"
+                name="Know"
               />
               <Line
                 type="monotone"
@@ -75,14 +75,11 @@ export const TrafficChart = () => {
                 strokeWidth={3}
                 strokeDasharray="8 8"
                 dot={{ fill: "#10B981", strokeWidth: 0, r: 4 }}
-                name="Animal Care Products"
+                name="Unknown"
               />
             </LineChart>
           </ResponsiveContainer>
         </div>
-
-        {/* Character illustration placeholder */}
-        <div className="absolute bottom-4 right-8 text-4xl">👩‍💼</div>
       </CardContent>
     </Card>
   );

@@ -6,7 +6,7 @@ export const BarChart = () => {
 
   return (
     <Card className="bg-gray-800 border-gray-700">
-      <CardHeader>
+      <CardHeader className="pt-9 px-6 pb-6">
         <CardTitle className="text-white text-lg">Weekly Traffic</CardTitle>
       </CardHeader>
       <CardContent>
@@ -19,11 +19,39 @@ export const BarChart = () => {
                   style={{
                     backgroundColor: item.color,
                     height: `${(item.value / maxValue) * 100}%`,
-                    minHeight: "20px",
+                    minHeight:
+                      item.value >= 100
+                        ? "120px"
+                        : item.value >= 60
+                          ? "70px"
+                          : "20px",
                   }}
                 >
                   {/* Value label */}
-                  <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 text-xs text-gray-300 font-medium">
+                  <div
+                    className="absolute text-xs text-gray-300 font-medium"
+                    style={{
+                      left: index % 2 === 0 ? "3px" : "5px",
+                      top: (() => {
+                        switch (index) {
+                          case 0:
+                            return "-64px"; // Mon (120)
+                          case 1:
+                            return "-116px"; // Tue (80)
+                          case 2:
+                            return "-67px"; // Wed (100)
+                          case 3:
+                            return "-118px"; // Thu (60)
+                          case 4:
+                            return "-69px"; // Fri (140)
+                          case 5:
+                            return "-120px"; // Sat (90)
+                          default:
+                            return "-120px";
+                        }
+                      })(),
+                    }}
+                  >
                     {item.value}
                   </div>
                 </div>

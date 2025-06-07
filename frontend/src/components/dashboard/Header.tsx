@@ -15,9 +15,7 @@ export const Header = () => {
       </div>
 
       {/* Dashboard Title */}
-      <div className="flex-1 text-center">
-        <h1 className="text-white text-lg font-medium italic">Dashboard</h1>
-      </div>
+      <div className="flex-1 text-center"></div>
 
       {/* User Profile */}
       <div className="flex items-center gap-3">
